@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>css vanila</title>
+</head>
+
+<body>
+    <h1>WE are Learning vanila css</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi quis eos autem illum vitae nam, nobis accusamus,
+        corrupti magni animi natus exercitationem voluptatum? Numquam maxime tempore dolorem neque, vel iure?</p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <ul class="portfolio-menu">
+                    <li class="active"  data-filter="*">All</li>
+                    <li  data-filter=".web">Web</li>
+                    <li data-filter=".software">Software</li>
+                    <li data-filter=".graphic">Graphic</li>
+                    <li data-filter=".seo">SEO</li>
+                </ul>
+            </div>
+        </div>
+        <!-- second row -->
+        <div class="row portfolio-items">
+
+            <div class="col-xl-4 web">
+                <div class="single-portfolio  ">
+                    <img src="./images/one.png" alt="">
+                        <div class="portfolio-overlay">
+                          <h4>Project One</h4>
+                          <p>Project Short Description</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-xl-4 software">
+                <div class="single-portfolio  ">
+                    <img src="./images/two.png" alt="">
+                        <div class="portfolio-overlay">
+                          <h4>Project Two</h4>
+                          <p>Project Short Description</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-xl-4 graphic">
+                <div class="single-portfolio  ">
+                    <img src="./images/three.png" alt="">
+                        <div class="portfolio-overlay">
+                          <h4>Project Three</h4>
+                          <p>Project Short Description</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-xl-4 seo">
+                <div class="single-portfolio  ">
+                    <img src="./images/four.png" alt="">
+                        <div class="portfolio-overlay">
+                          <h4>Project Four</h4>
+                          <p>Project Short Description</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-xl-4 software">
+                <div class="single-portfolio  ">
+                    <img src="./images/five.png" alt="">
+                        <div class="portfolio-overlay">
+                          <h4>Project Five</h4>
+                          <p>Project Short Description</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-xl-4 web">
+                <div class="single-portfolio ">
+                    <img src="./images/six.png" alt="">
+                        <div class="portfolio-overlay">
+                          <h4>Project Six</h4>
+                          <p>Project Short Description</p>
+                        </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+      
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+<script src="./js/isotope.min.js"></script>
+        <script>
+            // init Isotope
+                var $grid = $('.portfolio-items').isotope({
+                    // options
+                });
+                // filter items on button click
+                $('.portfolio-menu').on('click', 'li', function () {
+                    var filterValue = $(this).attr('data-filter');
+                    $grid.isotope({ filter: filterValue });
+                });
+
+                // // filter items on button active
+                // $('.portfolio-menu').on('click', 'li', function () {
+                //    $(this).activeClass('active').siblings.removeClass('active');
+                // });
+
+                // filter items on button active
+                // $('.portfolio-menu').on('click', 'li', function () {
+                //    $(this).activeClass('active').siblings.removeClass('active');
+                // $('')
+                // });
+
+
+                //   $('.portfolio-menu').click(function () {
+                    $('.portfolio-menu').on('click', 'li', function () {
+                        //ACTIVE CLASS
+                        $('.portfolio-menu ul li').removeClass('active');
+                        $(this).addClass('active');
+                  })
+        </script>
+</body>
+
+</html>
