@@ -16,10 +16,12 @@
     transition: .4s;
 }
 .overlay{
-    transform: rotate(0)
+    /* transform: rotate(0) */
+    transform: translateX(100%);
 }
 .content:hover .overlay{
     /* transform: scale(1.1); */
-    transform: rotate(360deg);
+    /* transform: rotate(360deg); */
+    transform: translateX(0);
 
 }
