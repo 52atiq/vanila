@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <ul class="portfolio-menu">
-                    <li class="active"  data-filter="*">All</li>
+                    <li class="active"  data-filter=".mobile">Mobile</li>
                     <li  data-filter=".web">Web</li>
                     <li data-filter=".software">Software</li>
                     <li data-filter=".graphic">Graphic</li>
@@ -31,7 +31,7 @@
         <!-- second row -->
         <div class="row portfolio-items">
 
-            <div class="col-xl-4 web">
+            <div class="col-xl-4 web mobile">
                 <div class="single-portfolio  ">
                     <img src="./images/one.png" alt="">
                         <div class="portfolio-overlay">
@@ -97,7 +97,11 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
         integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-<script src="./js/isotope.min.js"></script>
+<!-- <script src="./js/isotope.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+    integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
             // init Isotope
                 var $grid = $('.portfolio-items').isotope({
